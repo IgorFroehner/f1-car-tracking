@@ -3,3 +3,4 @@ f1
 tests_output
 *.mp4
 project.avi
+__pycache__
