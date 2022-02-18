@@ -16,4 +16,5 @@ if __name__ == '__main__':
 
     # Create Video
     # create_video('eau_rouge_easy', 'cv.TM_CCOEFF_NORMED')
-    create_video('eau_rouge_hard1', 'cv.TM_CCOEFF_NORMED', video_name='rouge_full')
+    create_video('eau_rouge_easy', 'cv.TM_CCOEFF_NORMED', video_name='rouge_easy')
+    create_video('eau_rouge_hard1', 'cv.TM_CCOEFF_NORMED', video_name='rouge_hard1')

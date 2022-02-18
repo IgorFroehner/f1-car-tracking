@@ -85,7 +85,7 @@ def return_tracked_image(image, templates, method, colored_image):
     else:
         top_left = max_loc
     
-    if max_val > 0.65:
+    if max_val > 0.7:
         bottom_right = (top_left[0] + w, top_left[1] + h)
         cv.rectangle(colored_image,top_left, bottom_right, color=(0,0,255), thickness=2)
 
