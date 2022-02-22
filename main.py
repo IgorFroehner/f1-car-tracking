@@ -8,13 +8,11 @@ from video import create_video
 
 if __name__ == '__main__':
     # All the 6 methods for comparison in a list
-    methods = ['cv.TM_CCOEFF', 'cv.TM_CCOEFF_NORMED', 'cv.TM_CCORR',
-            'cv.TM_CCORR_NORMED', 'cv.TM_SQDIFF', 'cv.TM_SQDIFF_NORMED']
+    methods = ['cv.TM_CCOEFF_NORMED', 'cv.TM_CCORR_NORMED','cv.TM_SQDIFF_NORMED']
     
     # Create Tests
     # create_tests(methods=methods)
 
     # Create Video
-    # create_video('eau_rouge_easy', 'cv.TM_CCOEFF_NORMED')
-    create_video('eau_rouge_easy', 'cv.TM_CCOEFF_NORMED', video_name='rouge_easy')
+    # create_video('eau_rouge_easy', 'cv.TM_CCOEFF_NORMED', video_name='rouge_easy')
     create_video('eau_rouge_hard1', 'cv.TM_CCOEFF_NORMED', video_name='rouge_hard1')

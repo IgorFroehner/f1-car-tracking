@@ -30,8 +30,6 @@ def match_template(img, templates, method, output_path="output.png", show=False)
         # print(val)
         # print(res)
         # print(w, h)
-        
-        exit(0)
     else:
         template = templates
 
@@ -44,15 +42,18 @@ def match_template(img, templates, method, output_path="output.png", show=False)
         top_left = min_loc
     else:
         top_left = max_loc
-    
-    bottom_right = (top_left[0] + w, top_left[1] + h)
-    cv.rectangle(img,top_left, bottom_right, 255, 2)
+
+    result_text = 'Template Not Detected'
+    if max_val > 0.7:
+        result_text = 'Detected Point'
+        bottom_right = (top_left[0] + w, top_left[1] + h)
+        cv.rectangle(img,top_left, bottom_right, 255, 2)
     
     plt.subplot(121),plt.imshow(res, cmap = 'gray')
     plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
 
     plt.subplot(122),plt.imshow(img, cmap = 'gray')
-    plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
+    plt.title(result_text), plt.xticks([]), plt.yticks([])
     
     plt.suptitle(method + f'\nmin: {min_val}, max: {max_val}')
     plt.savefig(output_path)
@@ -102,7 +103,7 @@ def apply_method(img, template, method):
 
 def get_templates():
     templates = []
-    for i in range(1, 7):
+    for i in range(1, 9):
         template_name = f'templates/rear{i}.png'
         templates.append(cv.imread(template_name, 0))
     return templates
