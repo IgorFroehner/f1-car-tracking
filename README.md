@@ -29,3 +29,14 @@ It was used the OpenCV 2 Python library.
     ```
     python3 main.py
     ```
+
+## Images
+
+* F1 Example
+
+    <img src="docs/exemplof1.png" alt="drawing" style="width:600px;"/>
+
+* Result Example
+
+    <img src="docs/write_example.png" alt="drawing" style="width:600px;"/>
+
